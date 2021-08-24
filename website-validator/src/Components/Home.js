@@ -6,7 +6,7 @@ export default function Home() {
 
 
     return (
-        <section>
+        <section className="home">
             <h2>Checkout some of these great websites!</h2>
             <p>
                 Love to e-shop, but don't know if you can trust the site?

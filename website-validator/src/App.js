@@ -7,17 +7,21 @@ import WebsiteDetails from "./Components/WebsiteDetails";
 import RequestForm from "./Components/RequestForm"
 
 function App() {
+  const [ websites, setWebsites ] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:8000/websites')
     .then(resp => resp.json())
-    .then(webData => console.log(webData))
-  }, [])
+    .then(webData => setWebsites(webData))
+  }, []);
+
+  console.log(websites);
 
   return (
     <div className="App">
       <Header />
       <Home />
+      <WebsiteList websites={websites}/>
     </div>
   );
 }
