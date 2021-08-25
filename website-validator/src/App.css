@@ -47,7 +47,48 @@
   --primary: var(--dark-grey);
   
 }
- .Header{
+
+
+.cards {
+  margin: 0 auto;
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  border: 2px solid;
+  background: crimson;
+}
+
+div.verified {
+  float: left;
+  padding: 10px;
+}
+
+
+.details > p{
+  text-align: center;
+}
+
+.site-image {
+  position: relative;
+}
+
+.site-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+
+
+.Header{
   background: var(--mid-turquoise );
   padding-bottom: 50px;
 } 

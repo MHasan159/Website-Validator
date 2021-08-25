@@ -1,3 +1,4 @@
+import styled from "styled-components";
 
 // Contains our buttons on the top to navigate around app
 
@@ -7,7 +8,7 @@ import React from "react";
 // import { Button, Header } from 'semantic-ui-react'
 
 
-const Headers = ({isDarkMode, onDarkModeClick}) => {
+const Header = ({isDarkMode, onDarkModeClick}) => {
     return(
         <div className = 'Header'>
         <button >Home</button>
@@ -31,7 +32,13 @@ const Headers = ({isDarkMode, onDarkModeClick}) => {
         </div>
     )
 
+    
+    return(
+        <header>
+            
+        </header>
+    )
 }
 
 
-export default Headers;
+export default Header;
