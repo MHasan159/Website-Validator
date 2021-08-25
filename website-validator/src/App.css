@@ -34,7 +34,7 @@
 
 .App {
   text-align: center;
-  color: var(--color);
+  color: var(--black);
   background-color: var(--background);
   min-height: 100vh;
   
@@ -70,7 +70,7 @@ button {
   cursor: pointer;
   color: var(--primary);
   background-color: var(--background);
-  border: 2px solid var(--white);
+  /* border: 2px solid var(--white); */
   transition: background-color 0.2s;
   line-height: 1;
 } 
