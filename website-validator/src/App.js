@@ -4,13 +4,13 @@ import { Route, Switch } from 'react-router-dom';
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
-// import WebsiteDetails from "./Components/WebsiteDetails";
+import WebsiteDetails from "./Components/WebsiteDetails";
 // import RequestForm from "./Components/RequestForm"
 
 
 function App() {
   const [ websites, setWebsites ] = useState([]);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [ isDarkMode, setIsDarkMode ] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:8000/websites')
@@ -18,7 +18,7 @@ function App() {
     .then(webData => setWebsites(webData))
   }, []);
 
-  console.log(websites);
+  // console.log(websites);
 
   function handleDarkModeClick() {
     setIsDarkMode(!isDarkMode);
@@ -33,6 +33,8 @@ function App() {
        />
       
       <Switch>
+
+        <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
 
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
