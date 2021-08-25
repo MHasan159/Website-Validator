@@ -4,8 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
+import RequestForm from "./Components/RequestForm";
 // import WebsiteDetails from "./Components/WebsiteDetails";
-// import RequestForm from "./Components/RequestForm"
+
 
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
   function handleDarkModeClick() {
     setIsDarkMode(!isDarkMode);
   }
+  function handleAddWebsites(newWebsite) {
+    const newWebsiteArray = [newWebsite, ...websites];
+    setWebsites(newWebsiteArray);
+  }
 
   return (
       
@@ -33,12 +38,12 @@ function App() {
        />
       
       <Switch>
-
+      <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
         <Route path="/" component={Home} />
-
-      </Switch>
+        
+       </Switch>
       
     </div>
   );
