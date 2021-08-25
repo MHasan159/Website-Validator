@@ -12,6 +12,9 @@ export default function WebsiteCards({ website }) {
 
             <div className="verified">{verified}</div>
 
+            <br></br>
+            <br></br>
+
             <div className="site-image">
                 <img src={image} alt={name} />
             </div>

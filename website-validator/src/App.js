@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
 // import WebsiteDetails from "./Components/WebsiteDetails";
 // import RequestForm from "./Components/RequestForm"
+
 
 function App() {
   const [ websites, setWebsites ] = useState([]);
@@ -29,10 +31,14 @@ function App() {
        isDarkMode={isDarkMode}
        onDarkModeClick={handleDarkModeClick}
        />
-       
-       <Home />
+      
+      <Switch>
 
-       <WebsiteList websites={websites}/>
+        <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
+
+        <Route path="/" component={Home} />
+
+      </Switch>
       
     </div>
   );

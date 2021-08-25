@@ -6,29 +6,34 @@ import styled from "styled-components";
 import React from "react";
 // import 'semantic-ui-css/semantic.min.css'
 // import { Button, Header } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
 
 const Header = ({isDarkMode, onDarkModeClick}) => {
     return(
         <div className = 'Header'>
-        <button >Home</button>
-        <button >SiteList</button>
-        <button >Guidelines</button>
-        
-        <button onClick={onDarkModeClick}>
-          {isDarkMode ? (
-            <span role="img" label="sun">
-              ☀️
-            </span>
-          ) : (
-            <span role="img" label="moon">
-              🌙
-            </span>
-          )}
-        </button>
-        <h1>Website Validator</h1> 
-
-
+          <nav>
+            <NavLink className="button" exact to="/">
+              Home
+            </NavLink>
+            <NavLink className="button" to="/SiteList">
+              SiteList
+              </NavLink>
+            <button >Guidelines</button>
+            
+            <button onClick={onDarkModeClick}>
+              {isDarkMode ? (
+                <span role="img" label="sun">
+                  ☀️
+                </span>
+              ) : (
+                <span role="img" label="moon">
+                  🌙
+                </span>
+              )}
+            </button>
+            <h1>Website Validator</h1> 
+            </nav>
         </div>
     )
 

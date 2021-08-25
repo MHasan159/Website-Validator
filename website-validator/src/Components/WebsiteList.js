@@ -8,6 +8,7 @@ export default function WebsiteList({ websites }) {
     const displayWebsites = 
     websites.map(website => 
         <WebsiteCards
+        key={website.id}
         website={website}
         />
         )

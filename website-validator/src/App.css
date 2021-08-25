@@ -63,11 +63,12 @@
   grid-template-rows: auto 1fr auto;
   position: relative;
   border: 2px solid;
-  background: crimson;
+  background: rgb(141, 53, 255);
 }
 
 div.verified {
-  float: left;
+  position: absolute;
+  left: 0px;
   padding: 10px;
 }
 
@@ -86,12 +87,12 @@ div.verified {
 }
 
 
-
-
 .Header{
   background: var(--mid-turquoise );
   padding-bottom: 50px;
 } 
+
+
 
 /* section {
   padding: 2rem;
@@ -109,11 +110,12 @@ button {
   font-weight: 600;
   color: inherit;
   cursor: pointer;
-  color: var(--primary);
-  background-color: var(--background);
-  border: 2px solid var(--white);
+  color: #338fff;
+  background-color: #e6eff3;
+  border: 2px solid #338fff;
   transition: background-color 0.2s;
   line-height: 1;
+  border-radius: 10px;
 } 
 
 .button.active,
