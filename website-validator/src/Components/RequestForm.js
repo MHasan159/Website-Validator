@@ -43,10 +43,18 @@ export default function RequestForm({addWebsites}) {
       <form onSubmit={handleSubmit} className="form" autoComplete="off">
         <h3>Request Form</h3>
         <select class="ui dropdown">
-        <option value="">All Catagories</option>
-        <option value="0">Clothing</option>
-        <option value="1">Skincare</option>
-        <option value="2">Pet</option>
+        <option value="all">All Catagories</option>
+        <option value="fashion">Clothing</option>
+        <option value="skincare">Skincare</option>
+        <option value="petsupplies">Pet</option>
+        <input
+        type="text"
+        id="catagory"
+        name="catagory"
+        value={catagory}
+        onChange={(event) => setCatagory(event.target.value)}
+        />
+
         </select><br></br><br></br>
         <label htmlFor="name">Name: </label>
         <input
