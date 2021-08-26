@@ -5,7 +5,7 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
 import WebsiteDetails from "./Components/WebsiteDetails";
-// import RequestForm from "./Components/RequestForm"
+import RequestForm from "./Components/RequestForm"
 
 
 function App() {
@@ -23,6 +23,10 @@ function App() {
   function handleDarkModeClick() {
     setIsDarkMode(!isDarkMode);
   }
+  function handleAddWebsites(newWebsite) {
+    const newWebsiteArray = [newWebsite, ...websites];
+    setWebsites(newWebsiteArray);
+  }
 
   return (
       
@@ -33,14 +37,18 @@ function App() {
        />
       
       <Switch>
+<<<<<<< HEAD
 
         <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
 
+=======
+      <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
+>>>>>>> MohamamdH
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
         <Route path="/" component={Home} />
-
-      </Switch>
+        
+       </Switch>
       
     </div>
   );

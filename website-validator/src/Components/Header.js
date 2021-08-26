@@ -17,10 +17,15 @@ const Header = ({isDarkMode, onDarkModeClick}) => {
             <NavLink className="button" exact to="/">
               Home
             </NavLink>
-            <NavLink className="button" to="/SiteList">
+            <NavLink className="button" exact to="/SiteList">
               SiteList
               </NavLink>
             <button >Guidelines</button>
+            <NavLink className="button" to="/SiteList/RequestForm">
+                RequestForm
+              </NavLink>
+
+            
             
             <button onClick={onDarkModeClick}>
               {isDarkMode ? (
@@ -33,17 +38,14 @@ const Header = ({isDarkMode, onDarkModeClick}) => {
                 </span>
               )}
             </button>
+           
             <h1>Website Validator</h1> 
             </nav>
         </div>
     )
 
     
-    return(
-        <header>
-            
-        </header>
-    )
+   
 }
 
 

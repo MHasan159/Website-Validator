@@ -92,6 +92,11 @@ div.verified {
   padding-bottom: 50px;
 } 
 
+/* form */
+input[type="text"]{
+  font-weight: normal;
+  font-size: 5 px;
+}
 
 /* section {
   padding: 2rem;
