@@ -37,13 +37,11 @@ function App() {
        />
       
       <Switch>
-<<<<<<< HEAD
+
+        <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
 
         <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
 
-=======
-      <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
->>>>>>> MohamamdH
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
         <Route path="/" component={Home} />
