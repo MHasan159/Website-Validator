@@ -44,7 +44,7 @@ export default function RequestForm({addWebsites}) {
         <h3>Request Form</h3>
         <select class="ui dropdown">
         <option value="all">All Catagories</option>
-        <option value="fashion">Clothing</option>
+        <option value="fashion">Fashion</option>
         <option value="skincare">Skincare</option>
         <option value="petsupplies">Pet</option>
         <input
@@ -56,38 +56,41 @@ export default function RequestForm({addWebsites}) {
         />
 
         </select><br></br><br></br>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="name">Name </label>
         <input
           type="text"
           id="name"
           name="name"
           placeholder = 'name of the site'
           value={name}
+          required
           onChange={(event) => setName(event.target.value)}
         /><br></br><br></br>
         {/* {name.length === 0 ? (
           <p style={{ color: "red" }}> *You must provide a name</p>
         ) : null} */}
-         <label htmlFor="url"> Link: </label>
+         <label htmlFor="url"> Link </label>
         <input
           type="text"
           id="url"
           name="url"
           placeholder = 'site link'
           value={link}
+          required
           onChange={(event) => setLink(event.target.value)}
         /><br></br><br></br>
-        <label htmlFor="image">Image: </label>
+        <label htmlFor="image">Image </label>
         <input
           type="text"
           id="image"
           name="image"
           placeholder = 'Image link'
           value={image}
+          required
           onChange={(event) => setImage(event.target.value)}
         /><br></br><br></br>
         
-        <button type="submit"> Submit</button>
+        <button className = 'submit'type="submit" > Submit</button>
       </form>
     </section>
   );

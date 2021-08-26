@@ -1,4 +1,4 @@
-import styled from "styled-components";
+
 
 // Contains our buttons on the top to navigate around app
 
@@ -20,8 +20,11 @@ const Header = ({isDarkMode, onDarkModeClick}) => {
               SiteList
               </NavLink>
             <button >Guidelines</button>
-            <NavLink className="button" to="/SiteList/RequestForm">
+            <NavLink className="button" to="/SiteList/Guidelines/RequestForm">
                 RequestForm
+              </NavLink>
+              <NavLink className="button" to="/SiteList/Guidelines">
+                Guidelines
               </NavLink>
 
             
