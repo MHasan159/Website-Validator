@@ -7,6 +7,8 @@ const Comments = ({ comments }) => {
        
     <body>
         <hr></hr>
+
+        
         <h2 className="title">Comments</h2>
         <div className="comments">
             {comments.map((com) => 

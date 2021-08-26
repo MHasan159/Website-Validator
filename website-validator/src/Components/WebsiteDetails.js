@@ -36,7 +36,7 @@ export default function WebsiteDetails() {
         <section>
             <div className="detailBox">
 
-                <div className="site-image">
+                <div className="site-image" className="details-image">
                     <img src={image} alt={name} />
                 </div>
                 <div className="details">

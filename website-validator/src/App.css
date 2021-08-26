@@ -72,6 +72,10 @@ div.verified {
   padding: 10px;
 }
 
+div.details-image{
+  background-color: rgb(11, 74, 190);
+}
+
 
 .details > p{
   text-align: center;
