@@ -18,7 +18,7 @@ function App() {
     .then(webData => setWebsites(webData))
   }, []);
 
-  // console.log(websites);
+  console.log(websites);
 
   function handleDarkModeClick() {
     setIsDarkMode(!isDarkMode);
