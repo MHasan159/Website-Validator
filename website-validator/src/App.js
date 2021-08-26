@@ -4,8 +4,11 @@ import { Route, Switch } from 'react-router-dom';
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
+import RequestForm from "./Components/RequestForm";
+import Guidelines from"./Components/Guidelines";
 import WebsiteDetails from "./Components/WebsiteDetails";
-import RequestForm from "./Components/RequestForm"
+
+
 
 
 function App() {
@@ -37,8 +40,10 @@ function App() {
        />
       
       <Switch>
+      <Route path="/SiteList/Guidelines/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
+      <Route path="/SiteList/Guidelines" component={Guidelines} />
 
-        <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
+        
 
         <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
 
