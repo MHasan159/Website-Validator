@@ -95,7 +95,7 @@ export default function RequestForm({addWebsites}) {
           onChange={(event) => setName(event.target.value)}
           />
         <br></br><br></br>
-        <label htmlFor="name">Description: </label>
+        <label htmlFor="name">Description </label>
         <input
           type="text"
           id="description"
@@ -130,7 +130,7 @@ export default function RequestForm({addWebsites}) {
           />
 
           <br></br><br></br>
-          <label htmlFor="name">Comment: </label>
+          <label htmlFor="name">Comment </label>
           <input
           type="text"
           id="comment"

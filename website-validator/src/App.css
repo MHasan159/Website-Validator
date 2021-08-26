@@ -44,7 +44,7 @@
   
   --color: var(--black);
   --background: var(--white);
-  --primary: var(--dark-grey);
+  --primary: var(--white);
   
 }
 
@@ -114,6 +114,21 @@ input#url{
 }
 
 input#image{
+  font-weight: normal;
+  font-size: 15px;
+}
+
+input#comment{
+  text-align: center;
+ margin: auto;
+ display: flex;
+  width: 150px;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input#description{
   font-weight: normal;
   font-size: 15px;
 }

@@ -41,7 +41,7 @@ function App() {
       
       <Switch>
       <Route path="/SiteList/Guidelines/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
-      <Route path="/SiteList/Guidelines" component={() => <Guidelines/>} />
+      <Route path="/SiteList/Guidelines" component={Guidelines} />
 
         
 
