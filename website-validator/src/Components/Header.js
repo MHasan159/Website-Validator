@@ -19,11 +19,10 @@ const Header = ({isDarkMode, onDarkModeClick}) => {
             <NavLink className="button" exact to="/SiteList">
               SiteList
               </NavLink>
-            <button >Guidelines</button>
-            <NavLink className="button" to="/SiteList/Guidelines/RequestForm">
+             <NavLink className="button" exact to="/SiteList/Guidelines/RequestForm">
                 RequestForm
               </NavLink>
-              <NavLink className="button" to="/SiteList/Guidelines">
+              <NavLink className="button" exact to="/SiteList/Guidelines">
                 Guidelines
               </NavLink>
 
