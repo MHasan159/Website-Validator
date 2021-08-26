@@ -6,13 +6,14 @@ import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
 import RequestForm from "./Components/RequestForm";
 import Guidelines from"./Components/Guidelines";
-// import WebsiteDetails from "./Components/WebsiteDetails";
+import WebsiteDetails from "./Components/WebsiteDetails";
+
 
 
 
 function App() {
   const [ websites, setWebsites ] = useState([]);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [ isDarkMode, setIsDarkMode ] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:8000/websites')
@@ -41,6 +42,11 @@ function App() {
       <Switch>
       <Route path="/SiteList/Guidelines/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
       <Route path="/SiteList/Guidelines" component={() => <Guidelines/>} />
+
+        
+
+        <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
+
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
         <Route path="/" component={Home} />

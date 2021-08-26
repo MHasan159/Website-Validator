@@ -10,6 +10,11 @@ export default function RequestForm({addWebsites}) {
     const [name, setName] = useState("");
     const [link, setLink] = useState("");
     const [image, setImage] = useState("");
+    const [description, setDescription] = useState("");
+    const [verified, setVerified] = useState("");
+    const [comment, setComment] = useState("");
+    const [userId, setUserId] = useState(1);
+    const [user, setUser] = useState("Anonymous");
     
     
     let history = useHistory();
@@ -18,10 +23,19 @@ export default function RequestForm({addWebsites}) {
     event.preventDefault();
 
     const formData = {
-      catagory,  
-      name,
-      link,
-      image
+      category: catagory,  
+      name: name,
+      url: link,
+      image: image,
+      description: description,
+      verified: verified,
+      comments: [
+        {
+          id: userId,
+          user: user,
+          comment: comment
+        }
+      ]
     };
 
     fetch("http://localhost:8000/websites", {
@@ -42,18 +56,32 @@ export default function RequestForm({addWebsites}) {
     <section>
       <form onSubmit={handleSubmit} className="form" autoComplete="off">
         <h3>Request Form</h3>
-        <select class="ui dropdown">
-        <option value="all">All Catagories</option>
-        <option value="fashion">Fashion</option>
-        <option value="skincare">Skincare</option>
-        <option value="petsupplies">Pet</option>
-        <input
+        <select className="ui dropdown"
         type="text"
         id="catagory"
         name="catagory"
         value={catagory}
         onChange={(event) => setCatagory(event.target.value)}
-        />
+        >
+        <option value="all">All Categories</option>
+        <option value="fashion">Fashion</option>
+        <option value="skincare">Skincare</option>
+        <option value="petsupplies">Pet</option>
+        </select>
+
+        <br></br><br></br>
+
+        <select className="ui dropdown"
+        type="text"
+        id="verified"
+        name="verified"
+        value={verified}
+        onChange={(event) => setVerified(event.target.value)}
+        >
+        <option value="❔">Not Verified</option>
+        <option value="✔">Verified</option>
+        <option value="❌">Invalid</option>
+       
 
         </select><br></br><br></br>
         <label htmlFor="name">Name </label>
@@ -65,7 +93,18 @@ export default function RequestForm({addWebsites}) {
           value={name}
           required
           onChange={(event) => setName(event.target.value)}
-        /><br></br><br></br>
+          />
+        <br></br><br></br>
+        <label htmlFor="name">Description: </label>
+        <input
+          type="text"
+          id="description"
+          name="description"
+          placeholder = 'description'
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+          />
+        <br></br><br></br>
         {/* {name.length === 0 ? (
           <p style={{ color: "red" }}> *You must provide a name</p>
         ) : null} */}
@@ -84,11 +123,23 @@ export default function RequestForm({addWebsites}) {
           type="text"
           id="image"
           name="image"
-          placeholder = 'Image link'
+          placeholder = 'image link'
           value={image}
           required
           onChange={(event) => setImage(event.target.value)}
-        /><br></br><br></br>
+          />
+
+          <br></br><br></br>
+          <label htmlFor="name">Comment: </label>
+          <input
+          type="text"
+          id="comment"
+          name="comment"
+          placeholder = 'comment'
+          value={comment}
+          onChange={(event) => setComment(event.target.value)}
+          />
+          <br></br><br></br>
         
         <button className = 'submit'type="submit" > Submit</button>
       </form>

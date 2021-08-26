@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 
 
 const Header = ({isDarkMode, onDarkModeClick}) => {
+  
     return(
         <div className = 'Header'>
           <nav>
