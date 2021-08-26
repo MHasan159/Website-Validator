@@ -81,20 +81,21 @@ export default function RequestForm({addWebsites}) {
         <option value="❔">Not Verified</option>
         <option value="✔">Verified</option>
         <option value="❌">Invalid</option>
-        </select>
+       
 
-        <br></br><br></br>
-        <label htmlFor="name">Name: </label>
+        </select><br></br><br></br>
+        <label htmlFor="name">Name </label>
         <input
           type="text"
           id="name"
           name="name"
           placeholder = 'name of the site'
           value={name}
+          required
           onChange={(event) => setName(event.target.value)}
           />
         <br></br><br></br>
-        <label htmlFor="name">Description: </label>
+        <label htmlFor="name">Description </label>
         <input
           type="text"
           id="description"
@@ -107,27 +108,29 @@ export default function RequestForm({addWebsites}) {
         {/* {name.length === 0 ? (
           <p style={{ color: "red" }}> *You must provide a name</p>
         ) : null} */}
-        <label htmlFor="url"> Link: </label>
+         <label htmlFor="url"> Link </label>
         <input
           type="text"
           id="url"
           name="url"
           placeholder = 'site link'
           value={link}
+          required
           onChange={(event) => setLink(event.target.value)}
         /><br></br><br></br>
-        <label htmlFor="image">Image: </label>
+        <label htmlFor="image">Image </label>
         <input
           type="text"
           id="image"
           name="image"
           placeholder = 'image link'
           value={image}
+          required
           onChange={(event) => setImage(event.target.value)}
           />
 
           <br></br><br></br>
-          <label htmlFor="name">Comment: </label>
+          <label htmlFor="name">Comment </label>
           <input
           type="text"
           id="comment"
@@ -138,7 +141,7 @@ export default function RequestForm({addWebsites}) {
           />
           <br></br><br></br>
         
-        <button type="submit"> Submit</button>
+        <button className = 'submit'type="submit" > Submit</button>
       </form>
     </section>
   );

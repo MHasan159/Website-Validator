@@ -44,7 +44,7 @@
   
   --color: var(--black);
   --background: var(--white);
-  --primary: var(--dark-grey);
+  --primary: var(--white);
   
 }
 
@@ -93,20 +93,65 @@ div.verified {
 } 
 
 /* form */
-input[type="text"]{
+
+select.ui.dropdown{
+
+ text-align: center;
+ margin: auto;
+ display: flex;
+  width: 150px;
   font-weight: normal;
-  font-size: 5 px;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+input#name{
+  font-weight: normal;
+  font-size: 15px;
+}
+input#url{
+  font-weight: normal;
+  font-size: 15px;
 }
 
-/* section {
-  padding: 2rem;
+input#image{
+  font-weight: normal;
+  font-size: 15px;
+}
+
+input#comment{
+  font-weight: normal;
+  font-size: 15px;
+}
+
+input#description{
+  font-weight: normal;
+  font-size: 15px;
+}
+button.submit{
+  text-align: center;
+ margin: auto;
+ display: flex;
+  width: 90px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form.form{
+  text-align: center;
+ margin: auto;
+ display: flex;
+  width: 500px;
+  font-weight: normal;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-} */
+  }
 
-/* 
-buttons */ 
+
+
+
+
 .button,
 button {
   padding: 0.65rem;
@@ -168,31 +213,9 @@ select {
   border: 2px solid var(--color);
 }
 
-/* input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border: 2px solid var(--primary);
-} */
 
-/* links */
-/* a,
-.more-link {
-  color: var(--color);
-  border-bottom: 1px solid var(--color);
-  text-decoration: none;
-  cursor: pointer;
-} */
 
-/* a:hover,
-.more-link:hover {
-  background-color: var(--dark-grey);
-  border-bottom: 1px solid var(--blue);
-} */
 
-/* .more-link:hover::after {
-  content: " ➡";
-} */
 
 h1,
 h2,
@@ -219,32 +242,24 @@ span[role="img"] {
   padding: 1.75rem;
 }
 
-/* header */
+/* header
 header {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-content: center;
-}
-
-header h1 {
-  margin: 0;
-  cursor: pointer;
-}
-
-header h1 a {
-  border-bottom: none;
-}
-
-
-/* .project-detail {
-  display: flex;
-  width: 800px;
-  max-width: 90vw;
-}
-
-.project-detail .details {
-  flex: 1;
-  margin-left: 1rem;
 } */
+
+
+
+/* header h1 a {
+  border-bottom: none;
+} */
+
+/* header h1 a:hover {
+  border-bottom: none;
+  background-color: transparent;
+}  */
+
+
 
