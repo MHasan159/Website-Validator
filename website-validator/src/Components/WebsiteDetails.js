@@ -8,6 +8,7 @@ import Comments from "./Comments";
 export default function WebsiteDetails() {
 
     const [sites, setSites] = useState(null);
+    const [comment, setComment] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const [commentView, setCommentView] = useState(false);
 
@@ -18,9 +19,12 @@ export default function WebsiteDetails() {
         .then(resp => resp.json())
         .then(websites => {
             setSites(websites);
+            setComment(websites.comments);
             setIsLoaded(true);
         });
     }, [id]);
+
+    console.log(comment)
 
     if (!isLoaded) return <h2>Loading...</h2>;
 
@@ -31,6 +35,10 @@ export default function WebsiteDetails() {
         setCommentView(!commentView);
       }
 
+    function handleAddComment(newComment) {
+        const newCommentArray = [newComment, ...comment];
+        setSites(newCommentArray);
+    }
 
     return (
         <section>
@@ -54,7 +62,11 @@ export default function WebsiteDetails() {
                 <div className="App">
                     <button onClick={handleCommentToggle}>Hide Comments</button>
                     <> 
-                       { commentView ? null : <Comments comments={sites.comments} /> }
+                       { commentView ? null : <Comments 
+                       comments={sites.comments} 
+                       addComment={handleAddComment}
+                       id={id}
+                       /> }
                        </>
                 </div>
                     

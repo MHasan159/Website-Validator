@@ -52,6 +52,8 @@ export default function RequestForm({addWebsites}) {
       });
   }
 
+  
+
   return (
     <section>
       <form onSubmit={handleSubmit} className="form" autoComplete="off">
@@ -130,7 +132,7 @@ export default function RequestForm({addWebsites}) {
           />
 
           <br></br><br></br>
-          <label htmlFor="name">Comment </label>
+          <label htmlFor="comment">Comment </label>
           <input
           type="text"
           id="comment"

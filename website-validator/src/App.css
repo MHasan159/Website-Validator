@@ -96,9 +96,9 @@ div.details-image{
   padding-bottom: 50px;
 } 
 
-div.site-image{
-  background-color: #00efe1;
-}
+/* div.site-image{
+  background-color: #94033377;
+} */
 
 #Blog{
 text-align: center;
@@ -140,6 +140,10 @@ input#description{
   font-weight: normal;
   font-size: 15px;
 }
+input#user{
+  font-weight: normal;
+  font-size: 15px;
+}
 button.submit{
   text-align: center;
  margin: auto;
@@ -152,8 +156,8 @@ button.submit{
 
 form.form{
   text-align: center;
- margin: auto;
- display: flex;
+  margin: auto;
+  display: flex;
   width: 500px;
   font-weight: normal;
   font-size: 15px;
