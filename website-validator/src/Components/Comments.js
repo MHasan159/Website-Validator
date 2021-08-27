@@ -1,6 +1,9 @@
+import React, { useState } from "react";
 import CommentItem from "./CommentItem";
 
 const Comments = ({ comments }) => {
+
+    const [comment, setComment] = useState("");
 
     return (
 
