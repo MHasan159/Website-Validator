@@ -13,7 +13,7 @@ import WebsiteDetails from "./Components/WebsiteDetails";
 
 function App() {
   const [ websites, setWebsites ] = useState([]);
-  const [ isDarkMode, setIsDarkMode ] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:8000/websites')

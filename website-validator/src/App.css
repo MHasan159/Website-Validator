@@ -72,10 +72,6 @@ div.verified {
   padding: 10px;
 }
 
-div.details-image{
-  background-color: rgb(11, 74, 190);
-}
-
 
 .details > p{
   text-align: center;
@@ -192,7 +188,7 @@ button:focus,
 button:hover {
   outline: none;
   color: var(--white);
-  background-color: #9e6cd8;
+  background-color: var(--primary);
   border: 2px solid var(--primary);
 }
 
@@ -278,5 +274,10 @@ header {
   background-color: transparent;
 }  */
 
+
+
+/* .App-link {
+  color: #61dafb;
+} */
 
 
