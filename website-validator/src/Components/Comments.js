@@ -11,7 +11,7 @@ const Comments = ({ comments, addComment, id }) => {
 
     let history = useHistory();
 
-
+  
 
   function handleSubmit() {
 

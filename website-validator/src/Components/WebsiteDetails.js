@@ -24,7 +24,7 @@ export default function WebsiteDetails() {
         });
     }, [id]);
 
-    // console.log(comment)
+    // console.log(comment.length)
 
     if (!isLoaded) return <h2>Loading...</h2>;
 
