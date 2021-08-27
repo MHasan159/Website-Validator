@@ -5,36 +5,42 @@ import { useHistory } from "react-router-dom";
 
 const Comments = ({ comments, addComment, id }) => {
 
-    // const [userId, setUserId] = useState(0);
+    const [userId, setUserId] = useState(0);
     const [comment, setComment] = useState("");
     const [user, setUser] = useState("")
 
     let history = useHistory();
 
 
-  function handleSubmit(event) {
-    event.preventDefault();
 
-    const commentData = {
-     
+  function handleSubmit() {
+
+
+    const newComment = {
+          // id: userId,
           user: user,
           comment: comment
+    }
 
-    };
+    const commentData = [
+        ...comments,
+        newComment
+
+    ];
 
     
 
     fetch(`http://localhost:8000/websites/${id}`, {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(commentData),
+      body: JSON.stringify({comments: commentData}),
     })
       .then((r) => r.json())
       .then((newComment) => {
         addComment(newComment);
-        history.push("/SiteList/:id");
+        history.push(`/SiteList/${id}`);
       }
     );}
 

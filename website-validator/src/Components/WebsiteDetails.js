@@ -24,7 +24,7 @@ export default function WebsiteDetails() {
         });
     }, [id]);
 
-    console.log(comment)
+    // console.log(comment)
 
     if (!isLoaded) return <h2>Loading...</h2>;
 
@@ -37,7 +37,7 @@ export default function WebsiteDetails() {
 
     function handleAddComment(newComment) {
         const newCommentArray = [newComment, ...comment];
-        setSites(newCommentArray);
+        setComment(newCommentArray);
     }
 
     return (
@@ -63,7 +63,7 @@ export default function WebsiteDetails() {
                     <button onClick={handleCommentToggle}>Hide Comments</button>
                     <> 
                        { commentView ? null : <Comments 
-                       comments={sites.comments} 
+                       comments={comment} 
                        addComment={handleAddComment}
                        id={id}
                        /> }
