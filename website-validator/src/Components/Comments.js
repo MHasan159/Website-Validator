@@ -5,19 +5,20 @@ import { useHistory } from "react-router-dom";
 
 const Comments = ({ comments, addComment, id }) => {
 
-    const [userId, setUserId] = useState(0);
+    const [userId, setUserId] = useState(comments.length + 1);
     const [comment, setComment] = useState("");
     const [user, setUser] = useState("")
 
     let history = useHistory();
 
+  // console.log(userId)
   
 
   function handleSubmit() {
 
 
     const newComment = {
-          // id: userId,
+          id: userId,
           user: user,
           comment: comment
     }
