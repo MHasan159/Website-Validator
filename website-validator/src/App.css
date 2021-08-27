@@ -63,7 +63,7 @@
   grid-template-rows: auto 1fr auto;
   position: relative;
   border: 2px solid;
-  background: rgb(141, 53, 255);
+  background: linear-gradient(to top left, #6505c0 0%, #fd61af 100%);
 }
 
 div.verified {
