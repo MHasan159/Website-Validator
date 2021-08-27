@@ -5,7 +5,9 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import WebsiteList from "./Components/WebsiteList";
 import RequestForm from "./Components/RequestForm";
-// import WebsiteDetails from "./Components/WebsiteDetails";
+import Guidelines from"./Components/Guidelines";
+import WebsiteDetails from "./Components/WebsiteDetails";
+
 
 
 
@@ -38,7 +40,13 @@ function App() {
        />
       
       <Switch>
-      <Route path="/SiteList/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
+      <Route path="/SiteList/Guidelines/RequestForm" component = {() => <RequestForm addWebsites={handleAddWebsites}/>} />
+      <Route path="/SiteList/Guidelines" component={Guidelines} />
+
+        
+
+        <Route path="/SiteList/:id" component={() => <WebsiteDetails />} />
+
         <Route path="/SiteList" component={() => <WebsiteList websites={websites}/>} />
 
         <Route path="/" component={Home} />
