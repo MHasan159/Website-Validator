@@ -86,6 +86,10 @@ div.verified {
   max-width: 400px;
 }
 
+.details-image{
+  background-color: rgb(3, 65, 199);
+}
+
 
 .Header{
   background: var(--mid-turquoise );
