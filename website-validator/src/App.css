@@ -91,6 +91,13 @@ div.verified {
   background: var(--mid-turquoise );
   padding-bottom: 50px;
 } 
+div.site-image{
+  background-color: #00efe1;
+}
+#Blog{
+text-align: center;
+font-size: 40px;
+}
 
 /* form */
 
